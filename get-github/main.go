@@ -11,13 +11,15 @@ import (
 func main() {
 	client := github.NewClient(nil)
 
-	orgs, _, err := client.Organizations.List(context.Background(), "willnorris", nil)
+	// orgs, _, err := client.Organizations.List(context.Background(), "willnorris", nil)
+	opt := &github.CommitsListOptions{}
+	commits, _, err := client.Repositories.ListCommits(context.Background(), "ipfs", "go-ipfs", opt)
 
 	if err != nil {
 		panic(err)
 	}
 
-	b, err := json.Marshal(orgs)
+	b, err := json.Marshal(commits)
 
 	if err != nil {
 		panic(err)
