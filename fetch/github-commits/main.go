@@ -20,6 +20,16 @@ func main() {
 	}
 
 	w := csv.NewWriter(os.Stdout)
+	w.Write([]string{
+		"sha",
+		"login",
+		"message",
+		"url",
+		"date",
+	})
+	if err := w.Error(); err != nil {
+		panic(err)
+	}
 	for _, commit := range commits {
 		// sha, author.login, message, html_url, commit.author.date
 		SHA := commit.GetSHA()
