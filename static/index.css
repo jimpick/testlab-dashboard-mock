@@ -1,0 +1,38 @@
+body {
+  font-family: sans-serif;
+}
+
+th > div {
+  display: flex;
+  flex-direction: column;
+  font-weight: normal;
+  width: 8rem;
+}
+
+th, td {
+  width: 8rem;
+}
+
+th {
+  vertical-align: top;
+}
+
+.sha {
+  color: blue;
+}
+.date {
+  font-weight: 300;
+  font-size: small;
+}
+.login {
+  color: green;
+  font-weight: 700;
+}
+.message {
+  font-weight: 300;
+  font-size: small;
+  overflow: hidden;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}

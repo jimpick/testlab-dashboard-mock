@@ -3,6 +3,7 @@ import { html, Component, render } from 'https://unpkg.com/htm/preact/standalone
 const baseUrl = 'https://mockup-3knoa5s4ea-uc.a.run.app/mockup'
 
 const metricsUrl = baseUrl + '/metrics.json?_shape=array'
+const commitsUrl = baseUrl + '/commits.json?_shape=array'
 
 const query = 'select distinct commits.*, results.metricId,' + 
   'metrics.description, results.value, metrics.unit ' +
@@ -15,13 +16,6 @@ const url = baseUrl + '.json?sql=' +
   encodeURIComponent(query) + '&_shape=array'
 
 class Dashboard extends Component {
-  constructor (props) {
-    super(props)
-
-    this.state = {
-    }
-  }
-
   componentDidMount () {
     fetch(url)
       .then(resp => resp.json())
@@ -29,21 +23,59 @@ class Dashboard extends Component {
     fetch(metricsUrl)
       .then(resp => resp.json())
       .then(metrics => this.setState({ metrics }))
+    fetch(commitsUrl)
+      .then(resp => resp.json())
+      .then(commits => this.setState({ commits }))
   }
 
-  render (props, { data, metrics }) {
-    if (metrics) {
-      const rows = metrics.map(metric => {
+  render (props, { data, metrics, commits }) {
+    if (metrics && commits) {
+      const commitHeaders = commits.map(commit => {
+        const [date, time] = commit.date.replace(' +0000 UTC', '').split(' ')
         return html`
-          <tr><td>${metric.id}</td></tr>
+          <th>
+            <div>
+              <div class="sha">
+                ${commit.sha.substring(0, 6)}
+              </div>
+              <div class="date">
+                ${date}
+              </div>
+              <div class="time">
+                ${time}
+              </div>
+              <div class="login">
+                ${commit.login}
+              </div>
+              <div class="message">
+                ${commit.message}
+              </div>
+            </div>
+          </th>
         `
       })
-      return html`<table>${rows}</table>`
+      const rows = metrics.map(metric => {
+        const dataCols = commits.map(commit => {
+          return html`<td>.</td>`
+        })
+        return html`
+          <tr><td>${metric.id}</td>${dataCols}</tr>
+        `
+      })
+      return html`
+        <div>
+          <h3>go-ipfs : master</h3>
+          <table>
+            <tr><th></th>${commitHeaders}</tr>
+            ${rows}
+          </table>
+        </div>
+      `
     }
     return html`
       <div>
         Dashboard
-        <pre>${metrics && JSON.stringify(metrics, null, 2)}</pre>
+        <pre>${commits && JSON.stringify(commits, null, 2)}</pre>
       </div>
     `
   }
