@@ -1,6 +1,18 @@
 import { html, Component, render } from 'https://unpkg.com/htm/preact/standalone.mjs'
 
-const url = 'https://mockup-3knoa5s4ea-uc.a.run.app/mockup.json?sql=select+distinct+commits.*%2C+results.metricId%2C+metrics.description%2C+results.value%2C+metrics.unit+from+commits%2C+results%2C+metrics+where+commits.sha+%3D+results.sha+and+results.metricId+%3D+metrics.id+and+results.sha+%3D+commits.sha'
+const baseUrl = 'https://mockup-3knoa5s4ea-uc.a.run.app/mockup'
+
+const metricsUrl = baseUrl + '/metrics.json?_shape=array'
+
+const query = 'select distinct commits.*, results.metricId,' + 
+  'metrics.description, results.value, metrics.unit ' +
+  'from commits, results, metrics ' +
+  'where commits.sha = results.sha and ' +
+  'results.metricId = metrics.id and ' +
+  'results.sha = commits.sha'
+
+const url = baseUrl + '.json?sql=' +
+  encodeURIComponent(query) + '&_shape=array'
 
 class Dashboard extends Component {
   constructor (props) {
@@ -14,13 +26,24 @@ class Dashboard extends Component {
     fetch(url)
       .then(resp => resp.json())
       .then(data => this.setState({ data }))
+    fetch(metricsUrl)
+      .then(resp => resp.json())
+      .then(metrics => this.setState({ metrics }))
   }
 
-  render (props, { data }) {
+  render (props, { data, metrics }) {
+    if (metrics) {
+      const rows = metrics.map(metric => {
+        return html`
+          <tr><td>${metric.id}</td></tr>
+        `
+      })
+      return html`<table>${rows}</table>`
+    }
     return html`
       <div>
         Dashboard
-        <pre>${data && JSON.stringify(data, null, 2)}</pre>
+        <pre>${metrics && JSON.stringify(metrics, null, 2)}</pre>
       </div>
     `
   }
