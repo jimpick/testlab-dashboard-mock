@@ -1,0 +1,19 @@
+test_suite_slug,order,slug,name,description
+smoke_test,1,pass_fail,Pass or Fail,Quick smoke test
+canary,1,add-get-8mb,Add/get 8M,Add and get an 8 MiB file
+canary,2,add-get-1gb,Add/get 1G,Add and get a 1 GiB file
+canary,3,find-random-peer,Random peer,Find a random peer
+gateway,1,test-1,Test #1,Test #1
+gateway,2,test-2,Test #2,Test #2
+dht,1,test-1,Test #1,Test #1
+dht,2,test-2,Test #2,Test #2
+bitswap,1,no-prov,No prov lookup,Bitswap without a provider lookup
+bitswap,2,with-prov,Prov lookup,Bitswap with a provider lookup
+benchmark,1,test-1,Test #1,Test #1
+benchmark,2,test-2,Test #2,Test #2
+small-sim,1,test-1,Test #1,Test #1
+small-sim,2,test-2,Test #2,Test #2
+large-sim,1,test-1,Test #1,Test #1
+large-sim,2,test-2,Test #2,Test #2
+interop,1,test-1,Test #1,Test #1
+interop,2,test-2,Test #2,Test #2

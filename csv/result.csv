@@ -1,0 +1,13 @@
+test_run_id,test_slug,metric_slug,value
+1,add-get-8mb,1st-prov,1.0
+1,add-get-8mb,find-peer,2.0
+1,add-get-8mb,get-file,5.0
+1,add-get-1gb,1st-prov,1.0
+1,add-get-1gb,find-peer,2.0
+1,add-get-1gb,get-file,5.0
+1,find-random-peer,find-peer,2.0
+2,no-prov,find-peer,1.0
+2,no-prov,get-file,4.0
+2,with-prov,1st-prov,1.0
+2,with-prov,find-peer,2.0
+2,with-prov,get-file,5.0

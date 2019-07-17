@@ -36,3 +36,10 @@ th {
   display: -webkit-box;
   -webkit-box-orient: vertical;
 }
+
+.tracking-issue {
+  font-size: x-small;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+}

@@ -1,0 +1,11 @@
+order,slug,name
+1,smoke-test,Smoke test
+2,canary,Canary tests
+3,gateway,Live gateway tests
+4,dht,DHT tests
+5,bitswap,Bitswap tests
+6,benchmark,Benchmark
+7,small-sim,Small Simulation
+8,large-sim,Large Simulation
+9,interop,Go-JS Interop Tests
+10,package-managers,Package Manager Performance Benchmarks

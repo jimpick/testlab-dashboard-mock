@@ -1,0 +1,13 @@
+test_suite_slug,test_slug,order,slug,description,unit,improve_direction
+canary,add-get-8mb,1,1st-prov,Time to first provider record,seconds,-1
+canary,add-get-8mb,2,find-peer,Time to find peer,seconds,-1
+canary,add-get-8mb,3,get-file,Time to get file,seconds,-1
+canary,add-get-1gb,1,1st-prov,Time to first provider record,seconds,-1
+canary,add-get-1gb,2,find-peer,Time to find peer,seconds,-1
+canary,add-get-1gb,3,get-file,Time to get file,seconds,-1
+canary,find-random-peer,1,find-peer,Time to find peer,seconds,-1
+bitswap,no-prov,1,find-peer,Time to find peer,seconds,-1
+bitswap,no-prov,2,get-file,Time to get file,seconds,-1
+bitswap,with-prov,1,1st-prov,Time to first provider record,seconds,-1
+bitswap,with-prov,2,find-peer,Time to find peer,seconds,-1
+bitswap,with-prov,3,get-file,Time to get file,seconds,-1

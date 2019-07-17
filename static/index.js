@@ -36,7 +36,7 @@ class Dashboard extends Component {
           <th>
             <div>
               <div class="sha">
-                ${commit.sha.substring(0, 6)}
+                <a href="${commit.url}">${commit.sha.substring(0, 6)}</a>
               </div>
               <div class="date">
                 ${date}
@@ -64,6 +64,10 @@ class Dashboard extends Component {
       })
       return html`
         <div>
+          <div class="tracking-issue">
+            <a href="https://github.com/ipfs/canary-testing/issues/1"
+              target="_blank">GitHub</a>
+          </div>
           <h3>go-ipfs : master</h3>
           <table>
             <tr><th></th>${commitHeaders}</tr>
