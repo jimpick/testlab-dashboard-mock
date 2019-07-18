@@ -2,6 +2,10 @@ body {
   font-family: sans-serif;
 }
 
+table {
+  border-collapse: collapse;
+}
+
 th > div {
   display: flex;
   flex-direction: column;
@@ -15,6 +19,14 @@ th, td {
 
 th {
   vertical-align: top;
+}
+
+td {
+  border-right: 2px solid #eee;
+}
+
+tr td:first-child {
+  min-width: 8rem;
 }
 
 .sha {
@@ -42,4 +54,34 @@ th {
   position: absolute;
   right: 0.5rem;
   top: 0.5rem;
+}
+
+.suite {
+  margin-top: 1rem;
+}
+
+.suite td div {
+  background: #eee;
+  padding: 0.3rem;
+  margin-top: 0.5rem;
+}
+
+.test + .test td {
+  border-top: 1px solid #eee;
+}
+
+.metric + .test td {
+  border-top: 1px solid #eee;
+}
+
+.metric td:first-child {
+  padding-left: 1rem;
+  font-weight: 300;
+}
+
+.metric td:not(:first-child) {
+  text-align: right;
+  padding-right: 3rem;
+  font-weight: 500;
+  color: green;
 }

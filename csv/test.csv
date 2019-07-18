@@ -1,5 +1,5 @@
-test_suite_slug,order,slug,name,description
-smoke_test,1,pass_fail,Pass or Fail,Quick smoke test
+test_suite_slug,sort_order,slug,name,description
+smoke-test,1,pass-fail,Pass or Fail,Quick smoke test
 canary,1,add-get-8mb,Add/get 8M,Add and get an 8 MiB file
 canary,2,add-get-1gb,Add/get 1G,Add and get a 1 GiB file
 canary,3,find-random-peer,Random peer,Find a random peer
@@ -17,3 +17,4 @@ large-sim,1,test-1,Test #1,Test #1
 large-sim,2,test-2,Test #2,Test #2
 interop,1,test-1,Test #1,Test #1
 interop,2,test-2,Test #2,Test #2
+package-managers,1,perf,Performance,Package Managers Performance Benchmark

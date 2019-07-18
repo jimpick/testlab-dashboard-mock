@@ -1,4 +1,4 @@
-order,slug,name
+sort_order,slug,name
 1,smoke-test,Smoke test
 2,canary,Canary tests
 3,gateway,Live gateway tests
