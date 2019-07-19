@@ -1,7 +1,7 @@
 import { html, Component, render } from 'https://unpkg.com/htm/preact/standalone.mjs'
 
-// const baseUrl = 'https://mockup-3knoa5s4ea-uc.a.run.app/mockup'
-const baseUrl = 'http://127.0.0.1:8001/mockup'
+const baseUrl = 'https://mockup20190718-1-3knoa5s4ea-uc.a.run.app/mockup'
+// const baseUrl = 'http://127.0.0.1:8001/mockup'
 
 const testsUrl = baseUrl + '/test.json?_shape=array&_size=max'
 const metricsUrl = baseUrl + '/metric.json?_shape=array&_size=max'
