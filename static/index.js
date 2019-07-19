@@ -1,15 +1,15 @@
 import { html, Component, render } from 'https://unpkg.com/htm/preact/standalone.mjs'
 
-const baseUrl = 'https://mockup-3knoa5s4ea-uc.a.run.app/mockup'
-// const baseUrl = 'http://127.0.0.1:8001/mockup'
+// const baseUrl = 'https://mockup-3knoa5s4ea-uc.a.run.app/mockup'
+const baseUrl = 'http://127.0.0.1:8001/mockup'
 
-const testsUrl = baseUrl + '/test.json?_shape=array'
-const metricsUrl = baseUrl + '/metric.json?_shape=array'
-const commitsUrl = baseUrl + '/commit.json?_shape=array'
+const testsUrl = baseUrl + '/test.json?_shape=array&_size=max'
+const metricsUrl = baseUrl + '/metric.json?_shape=array&_size=max'
+const commitsUrl = baseUrl + '/commit.json?_shape=array&_size=max'
 
 const query = sql => baseUrl + '.json?sql=' + encodeURIComponent(sql) +
-  '&_shape=array'
-const testSuitesUrl = query('select slug, name from test_suite ' +
+  '&_shape=array&_size=max'
+const testSuitesUrl = query('select slug, name, url from test_suite ' +
   'order by sort_order, slug')
 const resultsUrl = query('select result.*, test_run.* from result, test_run ' +
   'where result.test_run_id = test_run.id')
@@ -61,11 +61,11 @@ class Dashboard extends Component {
       })
       const rows = []
       for (const testSuite of testSuites) {
-        const { slug: testSuiteSlug, name: testSuiteName } = testSuite
+        const { slug: testSuiteSlug, name: testSuiteName, url } = testSuite
         rows.push(html`
           <tr class="suite">
             <td colspan=${commits.length + 1}>
-              <div>${testSuiteName}</div>
+              <div><a href=${url}>${testSuiteName}</a></div>
             </td>
           </tr>
         `)
@@ -82,7 +82,7 @@ class Dashboard extends Component {
               data-test-slug=${test.slug}
               data-test-description=${test.description}
             >
-              <td>${test.name}</td>
+              <td><a href=${test.url}>${test.name}</a></td>
               ${dataCols}
             </tr>
           `)
@@ -101,7 +101,13 @@ class Dashboard extends Component {
                 result.metric_slug === metric.slug
               )
               if (result.length === 1) {
-                return html`<td>${result[0].value}s</td>`
+                if (metric.unit === 'seconds') {
+                  return html`<td>${result[0].value}s</td>`
+                }
+                if (metric.unit === 'link') {
+                  return html`<td><a href=${result[0].value}>Link</a></td>`
+                }
+                return html`<td>${result[0].value}</td>`
               }
               return html`<td></td>`
             })

@@ -1,20 +1,16 @@
-test_suite_slug,sort_order,slug,name,description
-smoke-test,1,pass-fail,Pass or Fail,Quick smoke test
-canary,1,add-get-8mb,Add/get 8M,Add and get an 8 MiB file
-canary,2,add-get-1gb,Add/get 1G,Add and get a 1 GiB file
-canary,3,find-random-peer,Random peer,Find a random peer
-gateway,1,test-1,Test #1,Test #1
-gateway,2,test-2,Test #2,Test #2
-dht,1,test-1,Test #1,Test #1
-dht,2,test-2,Test #2,Test #2
-bitswap,1,no-prov,No prov lookup,Bitswap without a provider lookup
-bitswap,2,with-prov,Prov lookup,Bitswap with a provider lookup
-benchmark,1,test-1,Test #1,Test #1
-benchmark,2,test-2,Test #2,Test #2
-small-sim,1,test-1,Test #1,Test #1
-small-sim,2,test-2,Test #2,Test #2
-large-sim,1,test-1,Test #1,Test #1
-large-sim,2,test-2,Test #2,Test #2
-interop,1,test-1,Test #1,Test #1
-interop,2,test-2,Test #2,Test #2
-package-managers,1,perf,Performance,Package Managers Performance Benchmark
+test_suite_slug,sort_order,slug,name,description,url
+canary-fresh,1,bitswap-1-peer,BS: one peer,1 peer has the entire file,https://github.com/ipfs/canary-testing/issues/1#issuecomment-512714890
+canary-fresh,2,bitswap-many-peers-entire,BS: many/entire,Many peers have the entire file with different latencies/bandwidth,https://github.com/ipfs/canary-testing/issues/1#issuecomment-512714890
+canary-fresh,3,bitswap-many-peers-partial,BS: many/partial,Many peers have parts of the file,https://github.com/ipfs/canary-testing/issues/1#issuecomment-512714890
+canary-fresh,4,dht-publish-ipns,DHT: publish IPNS,Publish IPNS record,https://github.com/ipfs/canary-testing/issues/1#issuecomment-512714890
+canary-fresh,5,dht-resolve-ipns,DHT: resolve IPNS,Resolve IPNS record,https://github.com/ipfs/canary-testing/issues/1#issuecomment-512714890
+canary-unbootstrapped,1,bitswap-1-peer,BS: one peer,1 peer has the entire file,https://github.com/ipfs/canary-testing/issues/1#issuecomment-512714890
+canary-unbootstrapped,2,bitswap-many-peers-entire,BS: many/entire,Many peers have the entire file with different latencies/bandwidth,https://github.com/ipfs/canary-testing/issues/1#issuecomment-512714890
+canary-unbootstrapped,3,bitswap-many-peers-partial,BS: many/partial,Many peers have parts of the file,https://github.com/ipfs/canary-testing/issues/1#issuecomment-512714890
+canary-unbootstrapped,4,dht-publish-ipns,DHT: publish IPNS,Publish IPNS record,https://github.com/ipfs/canary-testing/issues/1#issuecomment-512714890
+canary-unbootstrapped,5,dht-resolve-ipns,DHT: resolve IPNS,Resolve IPNS record,https://github.com/ipfs/canary-testing/issues/1#issuecomment-512714890
+canary-n-queries,1,bitswap-1-peer,BS: one peer,1 peer has the entire file,https://github.com/ipfs/canary-testing/issues/1#issuecomment-512714890
+canary-n-queries,2,bitswap-many-peers-entire,BS: many/entire,Many peers have the entire file with different latencies/bandwidth,https://github.com/ipfs/canary-testing/issues/1#issuecomment-512714890
+canary-n-queries,3,bitswap-many-peers-partial,BS: many/partial,Many peers have parts of the file,https://github.com/ipfs/canary-testing/issues/1#issuecomment-512714890
+canary-n-queries,4,dht-publish-ipns,DHT: publish IPNS,Publish IPNS record,https://github.com/ipfs/canary-testing/issues/1#issuecomment-512714890
+canary-n-queries,5,dht-resolve-ipns,DHT: resolve IPNS,Resolve IPNS record,https://github.com/ipfs/canary-testing/issues/1#issuecomment-512714890

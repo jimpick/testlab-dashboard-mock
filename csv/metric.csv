@@ -1,13 +1,123 @@
 test_suite_slug,test_slug,sort_order,slug,description,unit,improve_direction
-canary,add-get-8mb,1,1st-prov,Time to first provider record,seconds,-1
-canary,add-get-8mb,2,find-peer,Time to find peer,seconds,-1
-canary,add-get-8mb,3,get-file,Time to get file,seconds,-1
-canary,add-get-1gb,1,1st-prov,Time to first provider record,seconds,-1
-canary,add-get-1gb,2,find-peer,Time to find peer,seconds,-1
-canary,add-get-1gb,3,get-file,Time to get file,seconds,-1
-canary,find-random-peer,1,find-peer,Time to find peer,seconds,-1
-bitswap,no-prov,1,find-peer,Time to find peer,seconds,-1
-bitswap,no-prov,2,get-file,Time to get file,seconds,-1
-bitswap,with-prov,1,1st-prov,Time to first provider record,seconds,-1
-bitswap,with-prov,2,find-peer,Time to find peer,seconds,-1
-bitswap,with-prov,3,get-file,Time to get file,seconds,-1
+canary-fresh,bitswap-1-peer,1,traffic-in,Bytes In,bytes,-1
+canary-fresh,bitswap-1-peer,2,traffic-out,Bytes Out,bytes,-1
+canary-fresh,bitswap-1-peer,3,packets-in-out,Packets,int,-1
+canary-fresh,bitswap-1-peer,4,cpu-profile,CPU Prof,link,
+canary-fresh,bitswap-1-peer,5,mem-profile,Mem Prof,link,
+canary-fresh,bitswap-1-peer,6,alloc-profile,Alloc Prof,link,
+canary-fresh,bitswap-1-peer,7,goroutine-profile,Go Prof,link,
+canary-fresh,bitswap-1-peer,8,time-entire-file,Time: File,seconds,-1
+canary-fresh,bitswap-many-peers-entire,1,traffic-in,Bytes In,bytes,-1
+canary-fresh,bitswap-many-peers-entire,2,traffic-out,Bytes Out,bytes,-1
+canary-fresh,bitswap-many-peers-entire,3,packets-in-out,Packets,int,-1
+canary-fresh,bitswap-many-peers-entire,4,cpu-profile,CPU Prof,link,
+canary-fresh,bitswap-many-peers-entire,5,mem-profile,Mem Prof,link,
+canary-fresh,bitswap-many-peers-entire,6,alloc-profile,Alloc Prof,link,
+canary-fresh,bitswap-many-peers-entire,7,goroutine-profile,Go Prof,link,
+canary-fresh,bitswap-many-peers-entire,8,time-entire-file,Time: File,seconds,-1
+canary-fresh,bitswap-many-peers-partial,1,traffic-in,Bytes In,bytes,-1
+canary-fresh,bitswap-many-peers-partial,2,traffic-out,Bytes Out,bytes,-1
+canary-fresh,bitswap-many-peers-partial,3,packets-in-out,Packets,int,-1
+canary-fresh,bitswap-many-peers-partial,4,cpu-profile,CPU Prof,link,
+canary-fresh,bitswap-many-peers-partial,5,mem-profile,Mem Prof,link,
+canary-fresh,bitswap-many-peers-partial,6,alloc-profile,Alloc Prof,link,
+canary-fresh,bitswap-many-peers-partial,7,goroutine-profile,Go Prof,link,
+canary-fresh,bitswap-many-peers-partial,8,time-entire-file,Time: File,seconds,-1
+canary-fresh,bitswap-many-peers-partial,9,duplicate-blocks,Dup Blocks,int,-1
+canary-fresh,dht-publish-ipns,1,traffic-in,Bytes In,bytes,-1
+canary-fresh,dht-publish-ipns,2,traffic-out,Bytes Out,bytes,-1
+canary-fresh,dht-publish-ipns,3,packets-in-out,Packets,int,-1
+canary-fresh,dht-publish-ipns,4,cpu-profile,CPU Prof,link,
+canary-fresh,dht-publish-ipns,5,mem-profile,Mem Prof,link,
+canary-fresh,dht-publish-ipns,6,alloc-profile,Alloc Prof,link,
+canary-fresh,dht-publish-ipns,7,goroutine-profile,Go Prof,link,
+canary-fresh,dht-publish-ipns,8,time-publish,Time: Publish,seconds,-1
+canary-fresh,dht-resolve-ipns,1,traffic-in,Bytes In,bytes,-1
+canary-fresh,dht-resolve-ipns,2,traffic-out,Bytes Out,bytes,-1
+canary-fresh,dht-resolve-ipns,3,packets-in-out,Packets,int,-1
+canary-fresh,dht-resolve-ipns,4,cpu-profile,CPU Prof,link,
+canary-fresh,dht-resolve-ipns,5,mem-profile,Mem Prof,link,
+canary-fresh,dht-resolve-ipns,6,alloc-profile,Alloc Prof,link,
+canary-fresh,dht-resolve-ipns,7,goroutine-profile,Go Prof,link,
+canary-fresh,dht-resolve-ipns,8,time-resolve,Time: Resolve,seconds,-1
+canary-unbootstrapped,bitswap-1-peer,1,traffic-in,Bytes In,bytes,-1
+canary-unbootstrapped,bitswap-1-peer,2,traffic-out,Bytes Out,bytes,-1
+canary-unbootstrapped,bitswap-1-peer,3,packets-in-out,Packets,int,-1
+canary-unbootstrapped,bitswap-1-peer,4,cpu-profile,CPU Prof,link,
+canary-unbootstrapped,bitswap-1-peer,5,mem-profile,Mem Prof,link,
+canary-unbootstrapped,bitswap-1-peer,6,alloc-profile,Alloc Prof,link,
+canary-unbootstrapped,bitswap-1-peer,7,goroutine-profile,Go Prof,link,
+canary-unbootstrapped,bitswap-1-peer,8,time-entire-file,Time: File,seconds,-1
+canary-unbootstrapped,bitswap-many-peers-entire,1,traffic-in,Bytes In,bytes,-1
+canary-unbootstrapped,bitswap-many-peers-entire,2,traffic-out,Bytes Out,bytes,-1
+canary-unbootstrapped,bitswap-many-peers-entire,3,packets-in-out,Packets,int,-1
+canary-unbootstrapped,bitswap-many-peers-entire,4,cpu-profile,CPU Prof,link,
+canary-unbootstrapped,bitswap-many-peers-entire,5,mem-profile,Mem Prof,link,
+canary-unbootstrapped,bitswap-many-peers-entire,6,alloc-profile,Alloc Prof,link,
+canary-unbootstrapped,bitswap-many-peers-entire,7,goroutine-profile,Go Prof,link,
+canary-unbootstrapped,bitswap-many-peers-entire,8,time-entire-file,Time: File,seconds,-1
+canary-unbootstrapped,bitswap-many-peers-partial,1,traffic-in,Bytes In,bytes,-1
+canary-unbootstrapped,bitswap-many-peers-partial,2,traffic-out,Bytes Out,bytes,-1
+canary-unbootstrapped,bitswap-many-peers-partial,3,packets-in-out,Packets,int,-1
+canary-unbootstrapped,bitswap-many-peers-partial,4,cpu-profile,CPU Prof,link,
+canary-unbootstrapped,bitswap-many-peers-partial,5,mem-profile,Mem Prof,link,
+canary-unbootstrapped,bitswap-many-peers-partial,6,alloc-profile,Alloc Prof,link,
+canary-unbootstrapped,bitswap-many-peers-partial,7,goroutine-profile,Go Prof,link,
+canary-unbootstrapped,bitswap-many-peers-partial,8,time-entire-file,Time: File,seconds,-1
+canary-unbootstrapped,bitswap-many-peers-partial,9,duplicate-blocks,Dup Blocks,int,-1
+canary-unbootstrapped,dht-publish-ipns,1,traffic-in,Bytes In,bytes,-1
+canary-unbootstrapped,dht-publish-ipns,2,traffic-out,Bytes Out,bytes,-1
+canary-unbootstrapped,dht-publish-ipns,3,packets-in-out,Packets,int,-1
+canary-unbootstrapped,dht-publish-ipns,4,cpu-profile,CPU Prof,link,
+canary-unbootstrapped,dht-publish-ipns,5,mem-profile,Mem Prof,link,
+canary-unbootstrapped,dht-publish-ipns,6,alloc-profile,Alloc Prof,link,
+canary-unbootstrapped,dht-publish-ipns,7,goroutine-profile,Go Prof,link,
+canary-unbootstrapped,dht-publish-ipns,8,time-publish,Time: Publish,seconds,-1
+canary-unbootstrapped,dht-resolve-ipns,1,traffic-in,Bytes In,bytes,-1
+canary-unbootstrapped,dht-resolve-ipns,2,traffic-out,Bytes Out,bytes,-1
+canary-unbootstrapped,dht-resolve-ipns,3,packets-in-out,Packets,int,-1
+canary-unbootstrapped,dht-resolve-ipns,4,cpu-profile,CPU Prof,link,
+canary-unbootstrapped,dht-resolve-ipns,5,mem-profile,Mem Prof,link,
+canary-unbootstrapped,dht-resolve-ipns,6,alloc-profile,Alloc Prof,link,
+canary-unbootstrapped,dht-resolve-ipns,7,goroutine-profile,Go Prof,link,
+canary-unbootstrapped,dht-resolve-ipns,8,time-resolve,Time: Resolve,seconds,-1
+canary-n-queries,bitswap-1-peer,1,traffic-in,Bytes In,bytes,-1
+canary-n-queries,bitswap-1-peer,2,traffic-out,Bytes Out,bytes,-1
+canary-n-queries,bitswap-1-peer,3,packets-in-out,Packets,int,-1
+canary-n-queries,bitswap-1-peer,4,cpu-profile,CPU Prof,link,
+canary-n-queries,bitswap-1-peer,5,mem-profile,Mem Prof,link,
+canary-n-queries,bitswap-1-peer,6,alloc-profile,Alloc Prof,link,
+canary-n-queries,bitswap-1-peer,7,goroutine-profile,Go Prof,link,
+canary-n-queries,bitswap-1-peer,8,time-entire-file,Time: File,seconds,-1
+canary-n-queries,bitswap-many-peers-entire,1,traffic-in,Bytes In,bytes,-1
+canary-n-queries,bitswap-many-peers-entire,2,traffic-out,Bytes Out,bytes,-1
+canary-n-queries,bitswap-many-peers-entire,3,packets-in-out,Packets,int,-1
+canary-n-queries,bitswap-many-peers-entire,4,cpu-profile,CPU Prof,link,
+canary-n-queries,bitswap-many-peers-entire,5,mem-profile,Mem Prof,link,
+canary-n-queries,bitswap-many-peers-entire,6,alloc-profile,Alloc Prof,link,
+canary-n-queries,bitswap-many-peers-entire,7,goroutine-profile,Go Prof,link,
+canary-n-queries,bitswap-many-peers-entire,8,time-entire-file,Time: File,seconds,-1
+canary-n-queries,bitswap-many-peers-partial,1,traffic-in,Bytes In,bytes,-1
+canary-n-queries,bitswap-many-peers-partial,2,traffic-out,Bytes Out,bytes,-1
+canary-n-queries,bitswap-many-peers-partial,3,packets-in-out,Packets,int,-1
+canary-n-queries,bitswap-many-peers-partial,4,cpu-profile,CPU Prof,link,
+canary-n-queries,bitswap-many-peers-partial,5,mem-profile,Mem Prof,link,
+canary-n-queries,bitswap-many-peers-partial,6,alloc-profile,Alloc Prof,link,
+canary-n-queries,bitswap-many-peers-partial,7,goroutine-profile,Go Prof,link,
+canary-n-queries,bitswap-many-peers-partial,8,time-entire-file,Time: File,seconds,-1
+canary-n-queries,bitswap-many-peers-partial,9,duplicate-blocks,Dup Blocks,int,-1
+canary-n-queries,dht-publish-ipns,1,traffic-in,Bytes In,bytes,-1
+canary-n-queries,dht-publish-ipns,2,traffic-out,Bytes Out,bytes,-1
+canary-n-queries,dht-publish-ipns,3,packets-in-out,Packets,int,-1
+canary-n-queries,dht-publish-ipns,4,cpu-profile,CPU Prof,link,
+canary-n-queries,dht-publish-ipns,5,mem-profile,Mem Prof,link,
+canary-n-queries,dht-publish-ipns,6,alloc-profile,Alloc Prof,link,
+canary-n-queries,dht-publish-ipns,7,goroutine-profile,Go Prof,link,
+canary-n-queries,dht-publish-ipns,8,time-publish,Time: Publish,seconds,-1
+canary-n-queries,dht-resolve-ipns,1,traffic-in,Bytes In,bytes,-1
+canary-n-queries,dht-resolve-ipns,2,traffic-out,Bytes Out,bytes,-1
+canary-n-queries,dht-resolve-ipns,3,packets-in-out,Packets,int,-1
+canary-n-queries,dht-resolve-ipns,4,cpu-profile,CPU Prof,link,
+canary-n-queries,dht-resolve-ipns,5,mem-profile,Mem Prof,link,
+canary-n-queries,dht-resolve-ipns,6,alloc-profile,Alloc Prof,link,
+canary-n-queries,dht-resolve-ipns,7,goroutine-profile,Go Prof,link,

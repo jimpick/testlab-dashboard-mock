@@ -1,11 +1,5 @@
-sort_order,slug,name
-1,smoke-test,Smoke test
-2,canary,Canary tests
-3,gateway,Live gateway tests
-4,dht,DHT tests
-5,bitswap,Bitswap tests
-6,benchmark,Benchmark
-7,small-sim,Small Simulation
-8,large-sim,Large Simulation
-9,interop,Go-JS Interop Tests
-10,package-managers,Package Manager Performance Benchmarks
+sort_order,slug,name,url
+1,canary-fresh,Canary: Freshly bootstrapped node,https://github.com/ipfs/canary-testing/issues/1#issuecomment-512714890
+2,canary-unbootstrapped,Canary: Unbootstrapped node,https://github.com/ipfs/canary-testing/issues/1#issuecomment-512714890
+3,canary-n-queries,Canary: Node that has run N queries so far,https://github.com/ipfs/canary-testing/issues/1#issuecomment-512714890
+4,big-sim,Big Simulation,https://github.com/ipfs/canary-testing/issues/1#issuecomment-512714890

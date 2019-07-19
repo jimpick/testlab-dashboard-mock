@@ -1,3 +1,2 @@
 id,sha,test_suite_slug,infra_instance,time,status
-1,333c9d16135a92b1f48ee66bbd5873a07aee4205,canary,cluster-1,2019-07-17T21:58:53.417Z,done
-2,333c9d16135a92b1f48ee66bbd5873a07aee4205,bitswap,cluster-1,2019-07-17T22:09:10.361Z,done
+1,333c9d16135a92b1f48ee66bbd5873a07aee4205,canary-fresh,cluster-1,2019-07-17T21:58:53.417Z,done
